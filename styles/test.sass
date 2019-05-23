@@ -1,0 +1,108 @@
+$black: #202221
+
+.test
+  font-family: 'Roboto', sans-serif
+  min-height: 100vh
+  //background-image: url('../assets/images/image3.png')
+  background-size: 70%
+  background-repeat: no-repeat
+  background-position: top right
+  padding-top: 30px
+
+  .ham
+    font-family: 'Oswald', sans-serif
+    cursor: pointer
+    display: flex
+    align-items: center
+
+    .ham-title
+      text-transform: uppercase
+      font-weight: bold
+      font-size: 24px
+      line-height: 25px
+      text-align: right
+      color: $black
+
+    .lines
+      margin-left: 15px
+
+      div
+        margin: 2px 0
+        height: 2px
+        width: 30px
+        background-color: $black
+
+        &:last-child
+          width: 22px
+
+  .image
+
+    img
+      height: auto
+      max-width: 100%
+
+  .logo
+    cursor: pointer
+    text-transform: uppercase
+    font-weight: 500
+    font-size: 48px
+    line-height: 56px
+    color: $black
+
+  .contact-form
+    font-family: 'Oswald', sans-serif
+    padding-left: 30px
+
+    .screen-reader-response
+      display: none
+
+    .contact-form-title
+      text-transform: uppercase
+      font-weight: bold
+      font-size: 60px
+      line-height: 62px
+      color: $black
+
+    .contact-form-subtitle
+      padding-top: 30px
+      max-width: 300px
+
+      span
+        font-weight: 300
+        font-size: 20px
+        line-height: 30px
+        color: #7A7E7C
+
+    .contact-form-mail
+
+      input[type=email]
+        background: none
+        border: none
+        border-bottom: 2px solid $black
+        max-width: 255px
+        margin: 30px 0
+        padding-top: 3px
+        padding-bottom: 7px
+
+        &::placeholder
+          font-weight: 300
+          font-size: 20px
+          color: #A1A1A1
+
+      input[type=submit]
+        background-color: $black
+        border: 3px solid $black
+        width: 100%
+        max-width: 255px
+        color: white
+        text-transform: uppercase
+        font-weight: normal
+        font-size: 20px
+        line-height: 36px
+        text-align: center
+
+      .wpcf7-not-valid-tip
+        display: none
+
+      .wpcf7-response-output
+        display: none
