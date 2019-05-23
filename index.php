@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="<?php bloginfo(template_url);?>/styles/reset.css">
-    <link rel="stylesheet" href="<?php bloginfo(template_url);?>/styles/main.css">
+    <link rel="stylesheet" href="<?= bloginfo(template_url);?>/styles/reset.css">
+    <link rel="stylesheet" href="<?= bloginfo(template_url);?>/styles/main.css">
 
 </head>
 <body>
@@ -20,7 +20,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 d-flex justify-content-between">
-                    <label for="log" class="logo">logo</label>
+                    <img class="logo" src="" alt="logo">
                     <label for="main" class="ham">
                         <span class="ham-title">menu</span>
                         <div class="lines">
@@ -30,13 +30,11 @@
                     </label>
                 </div>
                 <div class="col-md-4 d-flex align-items-center">
-                    <div class="contact-form mt-5">
-                        <?php echo do_shortcode('[contact-form-7 id="6" html_class="contact-form-mail"]'); ?>
-                    </div>
+                    <?php get_template_part('components/contactFormMail'); ?>
                 </div>
                 <div class="col-md-8">
                     <div class="image">
-                        <img src="<?php bloginfo(template_url);?>/assets/images/image3.png" alt="image3">
+                        <img src="<?= bloginfo(template_url);?>/assets/images/image3.png" alt="image3">
                     </div>
                 </div>
                 <div class="col-md-12">
