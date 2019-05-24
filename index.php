@@ -11,16 +11,18 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
     <link rel="stylesheet" href="<?= bloginfo(template_url);?>/styles/reset.css">
-    <link rel="stylesheet" href="<?= bloginfo(template_url);?>/styles/main.css">
+    <link rel="stylesheet" href="<?= bloginfo(template_url);?>/styles/test.css">
 
 </head>
 <body>
     <div class="test">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12 d-flex justify-content-between">
-                    <img class="logo" src="" alt="logo">
+                <div class="col-md-12 d-flex justify-content-between align-items-center">
+                    <label class="logo" for="logo">logo</label>
                     <label for="main" class="ham">
                         <span class="ham-title">menu</span>
                         <div class="lines">
@@ -39,9 +41,24 @@
                 </div>
                 <div class="col-md-12">
                     <div class="row">
-                        <div class="col-md-2">1</div>
-                        <div class="col-md-8">2</div>
-                        <div class="col-md-2">3</div>
+                        <div class="col-md-1 d-flex align-items-end">
+                            <div class="contacts left">
+                                <div><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="pt-3"><i class="fas fa-phone"></i></div>
+                            </div>
+                        </div>
+                        <div class="col-md-10 d-flex justify-content-end align-items-end">
+                            <div class="nav-menu">
+                             <!--TODO-->
+                            </div>
+                        </div>
+                        <div class="col-md-1 d-flex justify-content-end align-items-center">
+                            <div class="contacts">
+                                <div><i class="fab fa-instagram"></i></div>
+                                <div class="pt-3"><i class="fab fa-facebook-f"></i></div>
+                                <div class="pt-3"><i class="fab fa-twitter"></i></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

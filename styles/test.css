@@ -1,10 +1,55 @@
 .test {
   font-family: "Roboto", sans-serif;
   min-height: 100vh;
-  background-size: 70%;
-  background-repeat: no-repeat;
-  background-position: top right;
+  padding: 30px 0;
+  overflow: hidden;
+}
+.test .nav-menu .nav-items {
+  font-family: "Oswald", sans-serif;
+  display: flex;
+}
+.test .nav-menu .nav-items li {
+  padding-bottom: 7px;
+  padding-right: 20px;
+  transition: 0.1s;
+  border-bottom: 1px solid #CFCFCF;
+}
+.test .nav-menu .nav-items li:last-child {
+  padding-right: 0;
+}
+.test .nav-menu .nav-items li a {
+  color: #CFCFCF;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+.test .nav-menu .nav-items .nav-items.active-link {
+  transition: 0.1s;
+  border-bottom: 2px solid #202221;
+}
+.test .nav-menu .nav-items .nav-items.active-link a {
+  color: #202221;
+}
+.test .contacts {
+  display: inline-block;
+  text-align: center;
+}
+.test .contacts .fa-phone {
+  transform: rotateZ(90deg);
+}
+.test .contacts.left {
+  position: relative;
   padding-top: 30px;
+}
+.test .contacts.left:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -21px;
+  width: 50px;
+  height: 2px;
+  background-color: #202221;
 }
 .test .ham {
   font-family: "Oswald", sans-serif;

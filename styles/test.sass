@@ -1,13 +1,60 @@
 $black: #202221
+$inactive-link: #CFCFCF
 
 .test
   font-family: 'Roboto', sans-serif
   min-height: 100vh
-  //background-image: url('../assets/images/image3.png')
-  background-size: 70%
-  background-repeat: no-repeat
-  background-position: top right
-  padding-top: 30px
+  padding: 30px 0
+  overflow: hidden
+
+  .nav-menu
+
+    .nav-items
+      font-family: 'Oswald', sans-serif
+      display: flex
+
+      li
+        padding-bottom: 7px
+        padding-right: 20px
+        transition: .1s
+        border-bottom: 1px solid $inactive-link
+
+        &:last-child
+          padding-right: 0
+
+        a
+          color: $inactive-link
+          font-weight: normal
+          font-size: 14px
+          line-height: 15px
+          text-transform: uppercase
+
+      .nav-items.active-link
+        transition: .1s
+        border-bottom: 2px solid $black
+
+        a
+          color: $black
+
+  .contacts
+    display: inline-block
+    text-align: center
+
+    .fa-phone
+      transform: rotateZ(90deg)
+
+  .contacts.left
+    position: relative
+    padding-top: 30px
+
+    &:before
+      position: absolute
+      content: ''
+      top: 0
+      left: -21px
+      width: 50px
+      height: 2px
+      background-color: $black
 
   .ham
     font-family: 'Oswald', sans-serif
