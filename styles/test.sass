@@ -7,51 +7,62 @@ $inactive-link: #CFCFCF
   padding: 30px 0
   overflow: hidden
 
-  .nav-menu
-    overflow: hidden
-    padding-bottom: 4px
+  .col-nav-menu
+    display: flex
+    justify-content: flex-end
+    align-items: center
 
-    .nav-items
-      font-family: 'Oswald', sans-serif
+    .nav-menu
+      overflow: hidden
+      padding-bottom: 4px
+
+      .nav-items
+        font-family: 'Oswald', sans-serif
+        display: flex
+
+        li
+          padding-bottom: 10px
+          padding-right: 20px
+          transition: .1s
+          border-bottom: 1px solid $inactive-link
+
+          &:last-child
+            padding-right: 0
+
+          p
+            font-weight: normal
+            font-size: 14px
+            line-height: 15px
+            text-transform: uppercase
+            color: $inactive-link
+
+        .active-link
+          position: relative
+
+          &:before
+            position: absolute
+            content: ''
+            bottom: -2px
+            right: 20px
+            width: calc(100% + 40px)
+            height: 3px
+            background-color: $black
+
+          p
+            color: $black
+
+  .col-contact
+
+    &:last-child
       display: flex
+      justify-content: flex-end
 
-      li
-        padding-bottom: 10px
-        padding-right: 20px
-        transition: .1s
-        border-bottom: 1px solid $inactive-link
+    .contacts
+      display: inline-block
+      text-align: center
 
-        &:last-child
-          padding-right: 0
-
-        p
-          font-weight: normal
-          font-size: 14px
-          line-height: 15px
-          text-transform: uppercase
-          color: $inactive-link
-
-      .active-link
-        position: relative
-
-        &:before
-          position: absolute
-          content: ''
-          bottom: -2px
-          right: 20px
-          width: calc(100% + 40px)
-          height: 3px
-          background-color: $black
-
-        p
-          color: $black
-
-  .contacts
-    display: inline-block
-    text-align: center
-
-    .fa-phone
-      transform: rotateZ(90deg)
+      .fa-phone
+        transform: rotateZ(90deg)
 
   .contacts.left
     position: relative
@@ -110,9 +121,6 @@ $inactive-link: #CFCFCF
     font-family: 'Oswald', sans-serif
     padding-left: 30px
 
-    .screen-reader-response
-      display: none
-
     .contact-form-title
       text-transform: uppercase
       font-weight: bold
@@ -158,8 +166,12 @@ $inactive-link: #CFCFCF
         line-height: 36px
         text-align: center
 
-      .wpcf7-not-valid-tip
+      .screen-reader-response
         display: none
+
+      .wpcf7-not-valid-tip
+        display: block
+        margin-bottom: 5px
 
       .wpcf7-response-output
         display: none

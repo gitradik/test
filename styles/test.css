@@ -4,34 +4,39 @@
   padding: 30px 0;
   overflow: hidden;
 }
-.test .nav-menu {
+.test .col-nav-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.test .col-nav-menu .nav-menu {
   overflow: hidden;
   padding-bottom: 4px;
 }
-.test .nav-menu .nav-items {
+.test .col-nav-menu .nav-menu .nav-items {
   font-family: "Oswald", sans-serif;
   display: flex;
 }
-.test .nav-menu .nav-items li {
+.test .col-nav-menu .nav-menu .nav-items li {
   padding-bottom: 10px;
   padding-right: 20px;
   transition: 0.1s;
   border-bottom: 1px solid #CFCFCF;
 }
-.test .nav-menu .nav-items li:last-child {
+.test .col-nav-menu .nav-menu .nav-items li:last-child {
   padding-right: 0;
 }
-.test .nav-menu .nav-items li p {
+.test .col-nav-menu .nav-menu .nav-items li p {
   font-weight: normal;
   font-size: 14px;
   line-height: 15px;
   text-transform: uppercase;
   color: #CFCFCF;
 }
-.test .nav-menu .nav-items .active-link {
+.test .col-nav-menu .nav-menu .nav-items .active-link {
   position: relative;
 }
-.test .nav-menu .nav-items .active-link:before {
+.test .col-nav-menu .nav-menu .nav-items .active-link:before {
   position: absolute;
   content: "";
   bottom: -2px;
@@ -40,14 +45,18 @@
   height: 3px;
   background-color: #202221;
 }
-.test .nav-menu .nav-items .active-link p {
+.test .col-nav-menu .nav-menu .nav-items .active-link p {
   color: #202221;
 }
-.test .contacts {
+.test .col-contact:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+.test .col-contact .contacts {
   display: inline-block;
   text-align: center;
 }
-.test .contacts .fa-phone {
+.test .col-contact .contacts .fa-phone {
   transform: rotateZ(90deg);
 }
 .test .contacts.left {
@@ -105,9 +114,6 @@
   font-family: "Oswald", sans-serif;
   padding-left: 30px;
 }
-.test .contact-form .screen-reader-response {
-  display: none;
-}
 .test .contact-form .contact-form-title {
   text-transform: uppercase;
   font-weight: bold;
@@ -151,8 +157,12 @@
   line-height: 36px;
   text-align: center;
 }
-.test .contact-form .contact-form-mail .wpcf7-not-valid-tip {
+.test .contact-form .contact-form-mail .screen-reader-response {
   display: none;
+}
+.test .contact-form .contact-form-mail .wpcf7-not-valid-tip {
+  display: block;
+  margin-bottom: 5px;
 }
 .test .contact-form .contact-form-mail .wpcf7-response-output {
   display: none;

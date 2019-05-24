@@ -1,0 +1,63 @@
+@media only screen and (min-width: 768px)
+  .test
+
+    .col-nav-menu
+      order: 0
+      justify-content: center
+
+      .nav-menu
+        margin-top: 40px
+
+@media only screen and (max-width: 991px)
+  .test
+
+    .col-nav-menu
+      order: 0
+      justify-content: center
+
+      .nav-menu
+
+        .nav-items
+          flex-direction: column
+
+          li
+            margin-top: 5px
+
+          .active-link
+
+            &:before
+              right: 0
+              width: 100%
+
+    .col-contact
+      margin-top: 30px
+      order: 1
+
+      .contacts
+        display: flex
+        align-items: center
+
+        div
+          padding: 0 5px!important
+
+      .contacts.left
+        padding-top: 0
+
+        &:before
+          display: none
+
+@media only screen and (max-width: 575px)
+  .test
+
+    .contact-form
+      padding-left: 0
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      .wpcf7
+        width: 100%
+
+      .contact-form-title
+        font-size: 45px
+        align-self: flex-start

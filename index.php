@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="<?= bloginfo(template_url);?>/styles/reset.css">
     <link rel="stylesheet" href="<?= bloginfo(template_url);?>/styles/test.css">
+    <link rel="stylesheet" href="<?= bloginfo(template_url);?>/styles/media.css">
 
 </head>
 <body>
@@ -31,44 +32,26 @@
                         </div>
                     </label>
                 </div>
-                <div class="col-md-4 d-flex align-items-center">
+                <div class="col-md-5 col-lg-4 d-flex align-items-center justify-content-center">
                     <?php get_template_part('components/contactFormMail'); ?>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-7 col-lg-8">
                     <div class="image">
                         <img src="<?= bloginfo(template_url);?>/assets/images/image3.png" alt="image3">
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="row">
-                        <div class="col-md-1 d-flex align-items-end">
+                        <div class="col-6 col-lg-1 col-contact">
                             <div class="contacts left">
                                 <div><i class="fas fa-map-marker-alt"></i></div>
                                 <div class="pt-3"><i class="fas fa-phone"></i></div>
                             </div>
                         </div>
-                        <div class="col-md-10 d-flex justify-content-end align-items-end">
-                            <div class="nav-menu">
-                                <ul class="nav-items">
-                                    <?php
-                                    $fields = get_fields(31);
-                                    if( $fields ):
-                                        ?>
-                                        <?php
-                                        foreach ($fields as $field_name => $field):
-                                            if( $field ):
-                                                ?>
-                                                <li class="<?= $field_name == 'subscribe' ? 'active-link' : ''?>">
-                                                    <p><?= $field?></p>
-                                                </li>
-                                            <?php endif;?>
-                                        <?php endforeach; ?>
-
-                                    <?php endif; ?>
-                                </ul>
-                            </div>
+                        <div class="col-md-12 col-lg-10 col-nav-menu">
+                            <?php get_template_part('components/navMenu'); ?>
                         </div>
-                        <div class="col-md-1 d-flex justify-content-end align-items-center">
+                        <div class="col-6 col-lg-1 col-contact">
                             <div class="contacts">
                                 <div><i class="fab fa-instagram"></i></div>
                                 <div class="pt-3"><i class="fab fa-facebook-f"></i></div>

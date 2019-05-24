@@ -1,0 +1,59 @@
+@media only screen and (min-width: 768px) {
+  .test .col-nav-menu {
+    order: 0;
+    justify-content: center;
+  }
+  .test .col-nav-menu .nav-menu {
+    margin-top: 40px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .test .col-nav-menu {
+    order: 0;
+    justify-content: center;
+  }
+  .test .col-nav-menu .nav-menu .nav-items {
+    flex-direction: column;
+  }
+  .test .col-nav-menu .nav-menu .nav-items li {
+    margin-top: 5px;
+  }
+  .test .col-nav-menu .nav-menu .nav-items .active-link:before {
+    right: 0;
+    width: 100%;
+  }
+  .test .col-contact {
+    margin-top: 30px;
+    order: 1;
+  }
+  .test .col-contact .contacts {
+    display: flex;
+    align-items: center;
+  }
+  .test .col-contact .contacts div {
+    padding: 0 5px !important;
+  }
+  .test .col-contact .contacts.left {
+    padding-top: 0;
+  }
+  .test .col-contact .contacts.left:before {
+    display: none;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .test .contact-form {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .test .contact-form .wpcf7 {
+    width: 100%;
+  }
+  .test .contact-form .contact-form-title {
+    font-size: 45px;
+    align-self: flex-start;
+  }
+}
+
+/*# sourceMappingURL=media.css.map */
